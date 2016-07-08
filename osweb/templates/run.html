@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>OSWEB运维管理系统</title>
+
+    <!-- Bootstrap core CSS -->
+<!--    <link href="/static/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/dashboard.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/bootstrap-select.css">
+
+  <style>
+    body {
+      padding-top: 40px;
+    }
+  </style>
+
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/bootstrap-select.js"></script>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">OSWEB运维管理系统</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/dashboard">控制台</a></li>
+            <li><a href="/admin">设置</a></li>
+            {%if user.username%}
+            <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                {{user.username}}
+               <b class="caret"></b>
+             </a>
+             <ul class="dropdown-menu">
+             <li><a href="/logout/"><span class="glyphicon glyphicon-log-out" aria-hidden="true"> 退出登陆</span></a></li>
+             </ul>
+           </li>
+           {%else%}
+            <li><a href="/login/">登陆</a></li>
+           {%endif%}
+            <li><a href="#">帮助</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+          <h2 class="sub-header">任务发布</h2>
+          <div class="container">
+          {%if authuser == "pass" %}
+          <form action="/run/" method='post' class="navbar-form navbar-left" role="search">
+          <select class="selectpicker" multiple data-live-search="true" data-live-search-placeholder="Search" data-actions-box="true" name="node_name">
+          {% for key,tmp_nodes in nodes.items %}
+          <optgroup label="{{key}}">
+          {%for node in tmp_nodes%}
+          <option>{{node}}</option>
+          {%endfor%}
+          {%endfor%}
+          </select>
+         <button type="submit" id="fat-btn" class="btn btn-danger" data-loading-text="正在执行任务，请不要刷新页面,等待执行结果">执行操作</button>
+         </form>
+         {% if error != '' %}
+         <div class="alert alert-warning">
+        <a href="#" class="close" data-dismiss="alert">
+           &times;
+        </a>
+        <p style="color:red">{{error}}</p>
+        {%endif%}
+        {%else%}
+        <div class="alert alert-success" role="alert">
+        <p style="color:red">登陆后可执行任务发布！
+        <a href="/login" class="alert-info">登陆</a>
+        </p>
+        </div>
+        {%endif%}
+        </div>
+       </div>
+
+<script>
+   $(function() { 
+      $(".btn").click(function(){
+         $(this).button('loading').delay(1000).queue(function() {
+           // $(this).button('reset');
+         });        
+      });
+   });  
+</script>
+
+<script>
+  $(document).ready(function () {
+    var mySelect = $('#first-disabled2');
+
+    $('#special').on('click', function () {
+      mySelect.find('option:selected').prop('disabled', true);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#special2').on('click', function () {
+      mySelect.find('option:disabled').prop('disabled', false);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#basic2').selectpicker({
+      liveSearch: true,
+      maxOptions: 1
+    });
+  });
+</script>
+          <h3 class="sub-header">任务执行结果:</h3>
+          {%for value in report%}
+          <p>{{ value }}</p>
+          {% endfor %}
+        </div>
+       </div> 
+  
+  </body>
+</html>
+

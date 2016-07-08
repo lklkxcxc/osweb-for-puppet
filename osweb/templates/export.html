@@ -1,0 +1,44 @@
+{%extends "index.html"%}
+{%block zhengwen%}
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="/">总览 <span class="sr-only">(current)</span></a></li>
+            <li><a href="/report">报告管理</a></li>
+            <li><a href="/remote">虚拟终端</a></li>
+            <li><a href="/export">导出配置</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="/">节点管理</a></li>
+            <li><a href="/config">配置管理</a></li>
+            <li><a href="/run">任务管理</a></li>
+          </ul>
+         </div>
+          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h2 class="sub-header">功能后续推出...</h2>
+     <div>
+   </div>
+  </div>   
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="/static/js/dataTables.bootstrap.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/static/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
+
+                        <script>$(document).ready(function() {
+                        $('.datatable').dataTable( {        
+                                        "oLanguage": {
+                                                                "sUrl": "/static/json/zh_CN.json"
+                                                        } 
+                                        });
+                } );</script>
+
+{%endblock%}

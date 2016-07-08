@@ -1,0 +1,112 @@
+Using installed websockify at /usr/bin/websockify
+Starting webserver and WebSockets proxy on port 6080
+
+
+Navigate to this URL:
+
+    http://puppet:6080/vnc.html?host=puppet&port=6080
+
+Press Ctrl-C to exit
+
+
+WebSocket server settings:
+  - Listen on :6080
+  - Flash security policy server
+  - Web server. Web root: /root/puppet/noVNC-master
+  - SSL/TLS support
+  - proxying from :6080 to 192.168.118.128:5901
+192.168.118.1 - - [11/May/2016 21:37:35] 192.168.118.1: Plain non-SSL (ws://) WebSocket connection
+192.168.118.1 - - [11/May/2016 21:37:35] 192.168.118.1: Version hybi-13, base64: 'False'
+192.168.118.1 - - [11/May/2016 21:37:35] 192.168.118.1: Path: '/websockify'
+192.168.118.1 - - [11/May/2016 21:37:35] connecting to: 192.168.118.128:5901
+handler exception: [Errno 111] Connection refused
+192.168.118.1 - - [11/May/2016 21:39:31] 192.168.118.1: Plain non-SSL (ws://) WebSocket connection
+192.168.118.1 - - [11/May/2016 21:39:31] 192.168.118.1: Version hybi-13, base64: 'False'
+192.168.118.1 - - [11/May/2016 21:39:31] 192.168.118.1: Path: '/websockify'
+192.168.118.1 - - [11/May/2016 21:39:31] connecting to: 192.168.118.128:5901
+192.168.118.1 - - [11/May/2016 21:40:55] 192.168.118.1: Plain non-SSL (ws://) WebSocket connection
+192.168.118.1 - - [11/May/2016 21:40:55] 192.168.118.1: Version hybi-13, base64: 'False'
+192.168.118.1 - - [11/May/2016 21:40:55] 192.168.118.1: Path: '/websockify'
+192.168.118.1 - - [11/May/2016 21:40:55] connecting to: 192.168.118.128:5901
+192.168.118.1 - - [11/May/2016 21:42:57] 192.168.118.1: Plain non-SSL (ws://) WebSocket connection
+192.168.118.1 - - [11/May/2016 21:42:57] 192.168.118.1: Version hybi-13, base64: 'False'
+192.168.118.1 - - [11/May/2016 21:42:57] 192.168.118.1: Path: '/websockify'
+192.168.118.1 - - [11/May/2016 21:42:57] connecting to: 192.168.118.128:5901
+192.168.118.1 - - [11/May/2016 21:43:36] 192.168.118.1: Plain non-SSL (ws://) WebSocket connection
+192.168.118.1 - - [11/May/2016 21:43:36] 192.168.118.1: Version hybi-13, base64: 'False'
+192.168.118.1 - - [11/May/2016 21:43:36] 192.168.118.1: Path: '/websockify'
+192.168.118.1 - - [11/May/2016 21:43:36] connecting to: 192.168.118.128:5901
+192.168.118.1 - - [11/May/2016 21:43:40] 192.168.118.1: Plain non-SSL (ws://) WebSocket connection
+192.168.118.1 - - [11/May/2016 21:43:40] 192.168.118.1: Version hybi-13, base64: 'False'
+192.168.118.1 - - [11/May/2016 21:43:40] 192.168.118.1: Path: '/websockify'
+192.168.118.1 - - [11/May/2016 21:43:40] connecting to: 192.168.118.128:5901
+192.168.118.1 - - [12/May/2016 11:51:45] 192.168.118.1: Plain non-SSL (ws://) WebSocket connection
+192.168.118.1 - - [12/May/2016 11:51:45] 192.168.118.1: Version hybi-13, base64: 'False'
+192.168.118.1 - - [12/May/2016 11:51:45] 192.168.118.1: Path: '/websockify'
+192.168.118.1 - - [12/May/2016 11:51:45] connecting to: 192.168.118.128:5901
+192.168.118.1 - - [12/May/2016 12:26:36] 192.168.118.1: Plain non-SSL (ws://) WebSocket connection
+192.168.118.1 - - [12/May/2016 12:26:36] 192.168.118.1: Version hybi-13, base64: 'False'
+192.168.118.1 - - [12/May/2016 12:26:36] 192.168.118.1: Path: '/websockify'
+192.168.118.1 - - [12/May/2016 12:26:36] connecting to: 192.168.118.128:5901
+192.168.118.1 - - [12/May/2016 12:41:46] 192.168.118.1: Plain non-SSL (ws://) WebSocket connection
+192.168.118.1 - - [12/May/2016 12:41:46] 192.168.118.1: Version hybi-13, base64: 'False'
+192.168.118.1 - - [12/May/2016 12:41:46] 192.168.118.1: Path: '/websockify'
+192.168.118.1 - - [12/May/2016 12:41:46] connecting to: 192.168.118.128:5901
+192.168.118.1 - - [12/May/2016 12:42:06] 192.168.118.1: Plain non-SSL (ws://) WebSocket connection
+192.168.118.1 - - [12/May/2016 12:42:06] 192.168.118.1: Version hybi-13, base64: 'False'
+192.168.118.1 - - [12/May/2016 12:42:06] 192.168.118.1: Path: '/websockify'
+192.168.118.1 - - [12/May/2016 12:42:06] connecting to: 192.168.118.128:5901
+192.168.118.1 - - [12/May/2016 12:51:10] 192.168.118.1: Plain non-SSL (ws://) WebSocket connection
+192.168.118.1 - - [12/May/2016 12:51:10] 192.168.118.1: Version hybi-13, base64: 'False'
+192.168.118.1 - - [12/May/2016 12:51:10] 192.168.118.1: Path: '/websockify'
+192.168.118.1 - - [12/May/2016 12:51:10] connecting to: 192.168.118.128:5901
+192.168.118.1 - - [12/May/2016 12:51:15] 192.168.118.1: Plain non-SSL (ws://) WebSocket connection
+192.168.118.1 - - [12/May/2016 12:51:15] 192.168.118.1: Version hybi-13, base64: 'False'
+192.168.118.1 - - [12/May/2016 12:51:15] 192.168.118.1: Path: '/websockify'
+192.168.118.1 - - [12/May/2016 12:51:15] connecting to: 192.168.118.128:5901
+
+Terminating WebSockets proxy (109327)
+Got SIGTERM, exiting
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/logging/__init__.py", line 851, in emit
+    msg = self.format(record)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 724, in format
+    return fmt.format(record)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 464, in format
+    record.message = record.getMessage()
+  File "/usr/lib/python2.7/site-packages/websockify-0.7.0-py2.7.egg/websockify/websocket.py", line 902, in do_SIGTERM
+    self.terminate()
+  File "/usr/lib/python2.7/site-packages/websockify-0.7.0-py2.7.egg/websockify/websocket.py", line 880, in terminate
+    raise self.Terminate()
+Terminate
+Logged from file websocket.py, line 856
+In exit
+Using installed websockify at /usr/bin/websockify
+Starting webserver and WebSockets proxy on port 6080
+
+
+Navigate to this URL:
+
+    http://puppet:6080/vnc.html?host=puppet&port=6080
+
+Press Ctrl-C to exit
+
+
+WebSocket server settings:
+  - Listen on :6080
+  - Flash security policy server
+  - Web server. Web root: /root/puppet/noVNC-master
+  - SSL/TLS support
+  - proxying from :6080 to 192.168.118.128:5901
+192.168.118.1 - - [22/May/2016 17:51:47] 192.168.118.1: Plain non-SSL (ws://) WebSocket connection
+192.168.118.1 - - [22/May/2016 17:51:47] 192.168.118.1: Version hybi-13, base64: 'False'
+192.168.118.1 - - [22/May/2016 17:51:47] 192.168.118.1: Path: '/websockify'
+192.168.118.1 - - [22/May/2016 17:51:47] connecting to: 192.168.118.128:5901
+192.168.118.1 - - [22/May/2016 17:57:02] 192.168.118.1: Plain non-SSL (ws://) WebSocket connection
+192.168.118.1 - - [22/May/2016 17:57:02] 192.168.118.1: Version hybi-13, base64: 'False'
+192.168.118.1 - - [22/May/2016 17:57:02] 192.168.118.1: Path: '/websockify'
+192.168.118.1 - - [22/May/2016 17:57:02] connecting to: 192.168.118.128:5901
+192.168.118.1 - - [22/May/2016 17:57:05] 192.168.118.1: Plain non-SSL (ws://) WebSocket connection
+192.168.118.1 - - [22/May/2016 17:57:05] 192.168.118.1: Version hybi-13, base64: 'False'
+192.168.118.1 - - [22/May/2016 17:57:05] 192.168.118.1: Path: '/websockify'
+192.168.118.1 - - [22/May/2016 17:57:05] connecting to: 192.168.118.128:5901

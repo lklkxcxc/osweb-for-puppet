@@ -1,0 +1,58 @@
+{%extends "index.html"%}
+{%block zhengwen%}
+    <link href="/static/js/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-duallistbox-master/src/prettify.css">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-duallistbox-master/src/bootstrap-duallistbox.css">
+    <script src="/static/js/jquery.min.2.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/bootstrap-duallistbox-master/src/jquery.bootstrap-duallistbox.js"></script>
+
+<body class="container">
+
+    <div class="row">
+
+<h2>AGENT列表</h2>
+  <p>
+    请选择将左边离线agent主机添加到右边在线主机列表 ,系统会自动纠正离线主机问题并添加到在线主机列表,若添加失败请人工检查系统mco和ntp环境手动确认agent上线
+  </p>
+  <hr>
+  <form id="nodeform" action="/status/" method="post">
+    <select multiple="multiple" size="10" name="nodestatus">
+      {%for off in offline%}
+      <option value="{{off.offline}}">{{off.offline}}</option>
+      {%for no in online%}
+      <option value="{{no.online}}" selected="selected">{{no.online}}</option>
+      {%endfor%}
+      {%endfor%}
+    </select>
+    <br>
+    <button type="submit" class="btn btn-success btn-block" data-loading-text="正在修复任务，请不要刷新页面,等待执行结果">添加</button>
+  </form>
+  <script>
+    var demo1 = $('select[name="nodestatus"]').bootstrapDualListbox();
+    $("#demoform").submit(function() {
+      alert($('[name="nodestatus"]').val());
+      return false;
+    });
+  </script>
+<script>
+   $(function() { 
+      $(".btn").click(function(){
+         $(this).button('loading').delay(1000).queue(function() {
+           // $(this).button('reset');
+         });        
+      });
+   });  
+</script>
+</div>
+{%if off_host%}
+<p style="color:red">修复上线不成功主机列表,请人工干预:</p>
+</p>
+{%for i in off_host%}
+{{i}}&nbsp;
+{%endfor%}
+</p>
+{%endif%}
+</body>
+</html>
+{%endblock%}

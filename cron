@@ -1,0 +1,4 @@
+0 0  * * 3 /usr/bin/python /root/puppet/peizhi.pyc >>/home/puppet/imp.log 2>&1
+*/5 *  * * * /usr/bin/python /root/puppet/report.pyc >>/home/puppet/imp.log 2>&1
+*/3 *  * * * /usr/bin/python /root/puppet/modules.pyc >>/home/puppet/imp.log 2>&1
+*/10 *  * * * /usr/bin/python /root/puppet/tongji.pyc >>/home/puppet/imp.log 2>&1
